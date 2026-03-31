@@ -43,8 +43,8 @@ export const ResumeEditorPage = () => {
   const [isSaving, setIsSaving] = useState(false);
   const [resumeData, setResumeData] = useState(currentResume || {
     personalInfo: {
-      name: 'Anderson',
-      email: 'anderson@email.com',
+      name: 'Alexandra Chen',
+      email: 'alexandra.chen@email.com',
       phone: '+1 (555) 123-4567',
       location: 'San Francisco, CA',
       linkedIn: 'linkedin.com/in/alexandrachen',
