@@ -75,13 +75,13 @@ export const JobMatchPage = () => {
         }
       />
 
-      <div className="p-6 max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-8">
+      <div className="p-4 sm:p-6 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
           {/* Left Column - Input */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
           >
             {/* Job Description Input */}
             <Card>
@@ -149,7 +149,7 @@ Requirements:
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
           >
             {!matchResult ? (
               <Card className="h-full flex items-center justify-center min-h-[400px]">
@@ -187,18 +187,18 @@ Requirements:
                       />
                     </div>
 
-                    <div className="grid grid-cols-3 gap-4">
-                      <div className="bg-neutral-900 rounded-xl p-4 text-center">
-                        <p className="text-2xl font-bold text-offwhite">{matchResult.matchedSkills.length}</p>
-                        <p className="text-xs text-neutral-300">Skills Matched</p>
+                    <div className="grid grid-cols-3 gap-2 sm:gap-4">
+                      <div className="bg-neutral-900 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center">
+                        <p className="text-lg sm:text-2xl font-bold text-offwhite">{matchResult.matchedSkills.length}</p>
+                        <p className="text-xs sm:text-sm text-neutral-300">Skills Matched</p>
                       </div>
-                      <div className="bg-neutral-900 rounded-xl p-4 text-center">
-                        <p className="text-2xl font-bold text-offwhite">{matchResult.missingSkills.length}</p>
-                        <p className="text-xs text-neutral-300">Skills Missing</p>
+                      <div className="bg-neutral-900 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center">
+                        <p className="text-lg sm:text-2xl font-bold text-offwhite">{matchResult.missingSkills.length}</p>
+                        <p className="text-xs sm:text-sm text-neutral-300">Skills Missing</p>
                       </div>
-                      <div className="bg-neutral-900 rounded-xl p-4 text-center">
-                        <p className="text-2xl font-bold text-offwhite">{matchResult.roleAlignment}%</p>
-                        <p className="text-xs text-neutral-300">Role Alignment</p>
+                      <div className="bg-neutral-900 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center">
+                        <p className="text-lg sm:text-2xl font-bold text-offwhite">{matchResult.roleAlignment}%</p>
+                        <p className="text-xs sm:text-sm text-neutral-300">Role Alignment</p>
                       </div>
                     </div>
                   </Card>

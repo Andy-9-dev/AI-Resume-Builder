@@ -46,7 +46,7 @@ export const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
     <motion.aside
       initial={false}
       animate={{ width: isCollapsed ? 80 : 260 }}
-      className="fixed left-0 top-0 h-screen bg-black border-r border-charcoal z-40 flex flex-col"
+      className="fixed left-0 top-0 h-screen bg-black border-r border-charcoal z-40 flex flex-col hidden lg:flex"
     >
       {/* Logo */}
       <div className="h-16 flex items-center justify-between px-4 border-b border-charcoal/50">

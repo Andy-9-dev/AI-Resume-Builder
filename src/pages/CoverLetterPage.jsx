@@ -121,22 +121,22 @@ What we offer:
         }
       />
 
-      <div className="p-6 max-w-5xl mx-auto">
+      <div className="p-4 sm:p-6 max-w-5xl mx-auto">
         {/* Progress Steps */}
-        <div className="flex items-center justify-center mb-12">
+        <div className="flex items-center justify-center mb-8 sm:mb-12 overflow-x-auto">
           {[1, 2, 3].map((s, index) => (
-            <div key={s} className="flex items-center">
+            <div key={s} className="flex items-center flex-shrink-0">
               <div className={clsx(
-                'w-10 h-10 rounded-full flex items-center justify-center font-semibold transition-all',
+                'w-8 sm:w-10 h-8 sm:h-10 rounded-full flex items-center justify-center font-semibold transition-all text-xs sm:text-base',
                 step >= s
                   ? 'bg-crimson text-offwhite'
                   : 'bg-neutral-700 text-neutral-300'
               )}>
-                {step > s ? <Check className="w-5 h-5" /> : s}
+                {step > s ? <Check className="w-4 sm:w-5 h-4 sm:h-5" /> : s}
               </div>
               {index < 2 && (
                 <div className={clsx(
-                  'w-24 h-1 mx-2 rounded transition-all',
+                  'w-12 sm:w-24 h-1 mx-1 sm:mx-2 rounded transition-all',
                   step > s ? 'bg-crimson' : 'bg-neutral-700'
                 )} />
               )}
@@ -155,48 +155,48 @@ What we offer:
               className="space-y-8"
             >
               <Card>
-                <CardTitle className="flex items-center gap-2 mb-6">
-                  <User className="w-5 h-5 text-crimson" />
+                <CardTitle className="flex items-center gap-2 mb-4 sm:mb-6">
+                  <User className="w-4 sm:w-5 h-4 sm:h-5 text-crimson" />
                   Tone Selection
                 </CardTitle>
-                <div className="grid md:grid-cols-3 gap-4">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                   {tones.map((tone) => (
                     <button
                       key={tone.id}
                       onClick={() => setSelectedTone(tone.id)}
                       className={clsx(
-                        'p-4 rounded-xl border-2 text-left transition-all',
+                        'p-3 sm:p-4 rounded-lg sm:rounded-xl border-2 text-left transition-all text-sm sm:text-base',
                         selectedTone === tone.id
                           ? 'border-crimson bg-crimson/10'
                           : 'border-neutral-600 bg-neutral-800/50 hover:border-neutral-500 hover:bg-neutral-800'
                       )}
                     >
                       <p className={`font-medium ${selectedTone === tone.id ? 'text-offwhite' : 'text-neutral-200'}`}>{tone.label}</p>
-                      <p className={`text-sm ${selectedTone === tone.id ? 'text-neutral-200' : 'text-neutral-300'} mt-1`}>{tone.description}</p>
+                      <p className={`text-xs sm:text-sm ${selectedTone === tone.id ? 'text-neutral-200' : 'text-neutral-300'} mt-1`}>{tone.description}</p>
                     </button>
                   ))}
                 </div>
               </Card>
 
               <Card>
-                <CardTitle className="flex items-center gap-2 mb-6">
-                  <Clock className="w-5 h-5 text-crimson" />
+                <CardTitle className="flex items-center gap-2 mb-4 sm:mb-6">
+                  <Clock className="w-4 sm:w-5 h-4 sm:h-5 text-crimson" />
                   Length Selection
                 </CardTitle>
-                <div className="grid md:grid-cols-3 gap-4">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                   {lengths.map((length) => (
                     <button
                       key={length.id}
                       onClick={() => setSelectedLength(length.id)}
                       className={clsx(
-                        'p-4 rounded-xl border-2 text-left transition-all',
+                        'p-3 sm:p-4 rounded-lg sm:rounded-xl border-2 text-left transition-all text-sm sm:text-base',
                         selectedLength === length.id
                           ? 'border-crimson bg-crimson/10'
                           : 'border-neutral-600 bg-neutral-800/50 hover:border-neutral-500 hover:bg-neutral-800'
                       )}
                     >
                       <p className={`font-medium ${selectedLength === length.id ? 'text-offwhite' : 'text-neutral-200'}`}>{length.label}</p>
-                      <p className={`text-sm ${selectedLength === length.id ? 'text-neutral-200' : 'text-neutral-300'} mt-1`}>{length.description}</p>
+                      <p className={`text-xs sm:text-sm ${selectedLength === length.id ? 'text-neutral-200' : 'text-neutral-300'} mt-1`}>{length.description}</p>
                     </button>
                   ))}
                 </div>
@@ -265,8 +265,8 @@ What we offer:
                 </Button>
               </Card>
 
-              <div className="flex justify-between">
-                <Button variant="ghost" onClick={() => setStep(1)}>
+              <div className="flex flex-col sm:flex-row justify-end gap-2 sm:gap-3">
+                <Button variant="ghost" onClick={() => setStep(1)} size="sm" className="text-xs sm:text-sm">
                   Back
                 </Button>
                 <Button
@@ -276,6 +276,8 @@ What we offer:
                     handleGenerate();
                   }}
                   disabled={isGenerating}
+                  size="sm"
+                  className="text-xs sm:text-sm"
                 >
                   Skip & Generate Generic
                 </Button>
