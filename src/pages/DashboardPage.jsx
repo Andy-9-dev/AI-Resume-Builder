@@ -72,7 +72,7 @@ export const DashboardPage = () => {
   return (
     <Layout>
       <Header
-        title={`Welcome back, ${user?.name || 'there'}`}
+        title={`Welcome back, ${user?.name?.split(' ')[0] || 'Anderson'}`}
         subtitle="Here's how your resume is performing"
         actions={
           <div className="flex items-center gap-2 sm:gap-3">
