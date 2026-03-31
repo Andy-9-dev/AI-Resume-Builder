@@ -296,7 +296,7 @@ export const LandingPage = () => {
                         <Users className="w-8 sm:w-10 h-8 sm:h-10 text-crimson" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="text-base sm:text-lg font-semibold text-offwhite">Alexandra Chen</h3>
+                        <h3 className="text-base sm:text-lg font-semibold text-offwhite">Anderson</h3>
                         <p className="text-xs sm:text-sm text-softgray">Senior Software Engineer</p>
                         <div className="mt-2 sm:mt-3 flex flex-wrap gap-1 sm:gap-2">
                           <span className="px-2 py-1 bg-crimson/10 text-crimson text-xs rounded-md border border-crimson/20">React</span>

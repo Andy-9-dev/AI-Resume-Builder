@@ -8,12 +8,12 @@ export const parseResume = async (fileContent, fileType) => {
   // Parse based on file type (simplified simulation)
   const parsedData = {
     personalInfo: {
-      name: 'Alexandra Chen',
-      email: 'alexandra.chen@email.com',
+      name: 'Anderson',
+      email: 'anderson@email.com',
       phone: '+1 (555) 123-4567',
       location: 'San Francisco, CA',
-      linkedIn: 'linkedin.com/in/alexandrachen',
-      website: 'alexandra-chen.dev',
+      linkedIn: 'linkedin.com/in/anderson',
+      website: 'anderson.dev',
     },
     summary: 'Results-driven software engineer with 6+ years of experience building scalable web applications. Passionate about clean code, user experience, and mentoring junior developers. Led teams that delivered products used by millions of users.',
     experience: [
@@ -453,7 +453,7 @@ Thanks so much for reading, and I hope to hear from you soon!
 Warmly,
 Alexandra
 
-P.S. Feel free to check out my portfolio at alexandra-chen.dev or connect on LinkedIn!
+P.S. Feel free to check out my portfolio at anderson.dev or connect on LinkedIn!
       `.trim(),
     },
     confident: {
@@ -465,7 +465,7 @@ I am the ${positionTitle} candidate you've been looking for. With six years of p
 Let's discuss how I can contribute.
 
 Best,
-Alexandra Chen
+Anderson
       `.trim(),
       medium: `
 Dear Hiring Manager,
@@ -481,7 +481,7 @@ I am seeking a team that values excellence and is committed to building products
 I welcome the opportunity to discuss how I can contribute to your team's success.
 
 Regards,
-Alexandra Chen
+Anderson
       `.trim(),
       detailed: `
 Dear Hiring Manager,
@@ -499,7 +499,7 @@ I am seeking a position where I can leverage this experience to drive meaningful
 I invite you to review my application and schedule a conversation. I am prepared to demonstrate how my experience, skills, and leadership can contribute to your team's continued success.
 
 Respectfully,
-Alexandra Chen
+Anderson
 Senior Software Engineer
 ${resumeData.personalInfo.email} | ${resumeData.personalInfo.phone}
       `.trim(),
@@ -533,3 +533,4 @@ const extractPosition = (jobDescription) => {
 
   return 'Software Engineer';
 };
+

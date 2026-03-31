@@ -36,7 +36,7 @@ export const LoginPage = () => {
     
     login({
       id: '1',
-      name: 'Alexandra Chen',
+      name: 'Anderson',
       email: formData.email,
     });
     
@@ -49,8 +49,8 @@ export const LoginPage = () => {
     await new Promise(resolve => setTimeout(resolve, 1000));
     login({
       id: '1',
-      name: 'Alexandra Chen',
-      email: 'alexandra@email.com',
+      name: 'Anderson',
+      email: 'anderson@email.com',
     });
     setIsLoading(false);
     navigate('/dashboard');

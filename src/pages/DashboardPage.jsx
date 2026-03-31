@@ -194,7 +194,7 @@ export const DashboardPage = () => {
                       <FileText className="w-8 sm:w-10 h-8 sm:h-10 text-crimson" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-base sm:text-lg font-semibold text-white">Alexandra Chen</h3>
+                      <h3 className="text-base sm:text-lg font-semibold text-white">Anderson</h3>
                       <p className="text-xs sm:text-sm text-neutral-300 mb-2 sm:mb-3">Senior Software Engineer</p>
                       <div className="flex flex-wrap gap-1 sm:gap-2 mb-3 sm:mb-4">
                         <Badge variant="primary" size="sm" className="text-xs">React</Badge>
