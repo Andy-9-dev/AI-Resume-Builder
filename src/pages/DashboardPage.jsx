@@ -72,12 +72,17 @@ export const DashboardPage = () => {
   return (
     <Layout>
       <Header
-        title={`Welcome back, ${user?.name?.split(' ')[0] || 'there'}`}
+        title={`Welcome back, ${user?.name || 'there'}`}
         subtitle="Here's how your resume is performing"
         actions={
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link to="/profile">
+              <Button variant="ghost" size="sm" className="text-xs sm:text-sm">
+                Profile
+              </Button>
+            </Link>
             <Link to="/resumes/upload">
-              <Button leftIcon={<Plus className="w-4 h-4" />}>
+              <Button leftIcon={<Plus className="w-3 sm:w-4 h-3 sm:h-4" />} size="sm" className="text-xs sm:text-sm">
                 New Resume
               </Button>
             </Link>
@@ -131,6 +136,46 @@ export const DashboardPage = () => {
               </Card>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Profile Section */}
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          animate="visible"
+          className="mb-6 sm:mb-8"
+        >
+          <Card>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6">
+              <div className="flex items-center gap-4 flex-1 min-w-0">
+                <div className="w-16 sm:w-20 h-16 sm:h-20 rounded-xl bg-gradient-to-br from-crimson/20 to-blue-500/20 flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 sm:w-18 h-14 sm:h-18 rounded-lg bg-crimson flex items-center justify-center text-white font-bold text-xl sm:text-2xl">
+                    {user?.name?.charAt(0) || 'U'}
+                  </div>
+                </div>
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-lg sm:text-xl font-semibold text-offwhite truncate">{user?.name || 'User'}</h3>
+                  <p className="text-xs sm:text-sm text-neutral-300 truncate">{user?.email || 'user@example.com'}</p>
+                  <div className="flex items-center gap-2 mt-2">
+                    <Badge variant="success" size="sm" className="text-xs">Premium Member</Badge>
+                    <Badge variant="primary" size="sm" className="text-xs">Verified</Badge>
+                  </div>
+                </div>
+              </div>
+              <div className="flex gap-2 w-full sm:w-auto">
+                <Link to="/profile" className="flex-1 sm:flex-none">
+                  <Button variant="secondary" size="sm" className="w-full sm:w-auto text-xs sm:text-sm">
+                    View Profile
+                  </Button>
+                </Link>
+                <Link to="/settings" className="flex-1 sm:flex-none">
+                  <Button variant="ghost" size="sm" className="w-full sm:w-auto text-xs sm:text-sm">
+                    Settings
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </Card>
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-4 sm:gap-6">
